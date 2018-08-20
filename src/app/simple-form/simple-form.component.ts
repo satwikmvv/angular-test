@@ -1,19 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-simple-form',
-  template: `
-    <p>
-      simple-form works!
-    </p>
+  template: `<div>
+  {{imess}}
+    <input #val type="text" >
+    <button (click)="onClick($event)">Click Me!</button>
+  </div>
   `,
   styles: []
 })
 export class SimpleFormComponent implements OnInit {
 
-  constructor() { }
+  @Input() imess;
 
-  ngOnInit() {
+  onClick(e) {
+    console.log(e,'click')
   }
 
+  constructor() { console.log(this,'cons')}
+
+  ngOnInit() {
+    console.log(this)
+  }
 }

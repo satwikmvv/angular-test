@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
 import { HeroesComponent } from './heroes/heroes.component';
+import { MailService } from './mail.service';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { HeroesComponent } from './heroes/heroes.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [MailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
